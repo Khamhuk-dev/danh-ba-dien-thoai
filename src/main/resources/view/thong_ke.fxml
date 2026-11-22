@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="12.0" prefWidth="520.0" prefHeight="440.0" xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.danhba.controller.ThongKeController">
+    <padding>
+        <Insets top="16.0" right="16.0" bottom="16.0" left="16.0" />
+    </padding>
+
+    <Label text="THỐNG KÊ DANH BẠ" style="-fx-font-size: 15px; -fx-font-weight: bold;" />
+
+    <HBox spacing="24.0">
+        <Label fx:id="lblTongSo" text="Tổng số liên hệ: 0" style="-fx-font-size: 13px;" />
+        <Label fx:id="lblYeuThich" text="Số liên hệ yêu thích: 0" style="-fx-font-size: 13px;" />
+    </HBox>
+
+    <BarChart fx:id="bieuDoNhom" VBox.vgrow="ALWAYS" legendVisible="false">
+        <xAxis>
+            <CategoryAxis fx:id="trucNhom" label="Nhóm" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis fx:id="trucSoLuong" label="Số liên hệ" />
+        </yAxis>
+    </BarChart>
+
+    <Button text="Đóng" onAction="#xuLyDong" />
+</VBox>
